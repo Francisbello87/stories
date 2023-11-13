@@ -47,14 +47,14 @@ export default function HeroCollage() {
   return (
     <div className="hero-collage">
       <div className="left-column">
-        {leftImages.map((src) => (
-          <ImageELement src={src} />
+        {leftImages.map((src, index) => (
+          <ImageELement key={index} src={src} />
         ))}
         <VideoELement src={leftVideo} />
       </div>
       <div className="right-column">
-        {rightImages.map((src) => (
-          <ImageELement src={src} />
+        {rightImages.map((src, index) => (
+          <ImageELement key={index} src={src} />
         ))}
         <VideoELement src={rightVideo} />
       </div>

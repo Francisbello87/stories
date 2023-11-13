@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import imgSrc from '../../../public/89919__1_-removebg-preview.png'
 import gsap from 'gsap/dist/gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 
 
 const videoUrl =
@@ -10,7 +9,6 @@ export default function HeroPhone() {
   const phoneRef = useRef(null)
 
   useEffect(() =>{
-    gsap.registerEffect(ScrollTrigger)
     function intro(){
       const tl = gsap.timeline()
       tl.fromTo(phoneRef.current, {y:200}, {y:0, duration:1})
