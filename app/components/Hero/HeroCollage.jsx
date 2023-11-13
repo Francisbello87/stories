@@ -1,5 +1,7 @@
 import { photos, videos } from "@/app/data";
-import React from "react";
+import Image from "next/image";
+import React, { useEffect } from "react";
+import gsap from "gsap/dist/gsap";
 
 function VideoELement({ src }) {
   return (
@@ -19,15 +21,28 @@ function VideoELement({ src }) {
 function ImageELement({ src }) {
   return (
     <div className=" hero-element">
-      <img src={src} className="collage-element" alt="" />
+      <Image
+        loader={() => src}
+        src={src}
+        className="collage-element"
+        alt=""
+        width={300}
+        height={300}
+      />
     </div>
   );
 }
 export default function HeroCollage() {
-    const leftImages = photos.slice(0,2)
-    const rightImages = photos.slice(2, photos.length)
+  const leftImages = photos.slice(0, 2);
+  const rightImages = photos.slice(2, photos.length);
 
-    const [leftVideo, rightVideo] = videos
+  const [leftVideo, rightVideo] = videos;
+
+  useEffect(() => {
+    const tl = gsap.timeline({ delay: 0.5 });
+
+    tl.fromTo(".hero-element", { y: 300 }, { y: 0, duration: 1, stagger: 0.2 });
+  }, []);
 
   return (
     <div className="hero-collage">
