@@ -104,12 +104,12 @@
   .hero-usedBy{
     display: flex;
     justify-content: space-between;
-    margin: 234px 300px auto;
+    // margin: 234px 300px auto;
     padding-top: 234px;
     max-width: 1304px;
-    width: calc(100% - 48px);
+    width: calc(100% - 88px);
     position: relative;
-    color: black;
+    color: white;
 
     .hero-usedBy-copy{
       margin-bottom: 0;
