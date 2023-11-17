@@ -25,6 +25,7 @@ export default function Home() {
     <div>
       <Hero />
       <FeatureSlides/>
+      <div className="footer">Build your ideal story today.</div>
     </div>
   );
 }

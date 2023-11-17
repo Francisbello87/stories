@@ -4,7 +4,7 @@ import gsap from "gsap/dist/gsap";
 export default function HeroHeader() {
   useEffect(() => {
     gsap.fromTo(
-      ".hero-text",
+      "#hero-text",
       { opacity: 0 },
       { opacity: 1, duration: 0.5, delay: 0.2 }
     );
