@@ -16,15 +16,17 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    gsap.registerEffect(ScrollTrigger)
-  },[])
+    if (typeof document !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+  }, []);
 
   return loader ? (
     <div className="loader" />
   ) : (
     <div>
       <Hero />
-      <FeatureSlides/>
+      <FeatureSlides />
       <div className="footer">Build your ideal story today.</div>
     </div>
   );

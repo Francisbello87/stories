@@ -26,22 +26,25 @@ export default function FeatureSlides() {
   const featureSlidesRightRef = useRef(null);
 
   useEffect(() => {
-    function stopTrigger() {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: featureSlidesRightRef.current,
-          start: "top top",
-          end: () => `+=${featureSliderRef.current.offsetHeight}`,
-          scrub: true,
-          markers: true,
-          pin: true,
-        },
-      });
-    }
+    if (typeof document !== "undefined" && process.browser) {
+      function stopTrigger() {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: featureSlidesRightRef.current,
+            start: "top top",
+            end: () => `+=${featureSliderRef.current.offsetHeight}`,
+            scrub: true,
+            markers: true,
+            pin: true,
+          },
+        });
+      }
 
-    const master = gsap.timeline();
-    master.add(stopTrigger());
+      const master = gsap.timeline();
+      master.add(stopTrigger());
+    }
   }, []);
+
   return (
     <div ref={featureSliderRef} className="feature-slides-container">
       <div className="feature-slides-left">
