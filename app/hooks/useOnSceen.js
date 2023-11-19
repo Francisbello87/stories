@@ -4,12 +4,12 @@ function useOnScreen(ref, threshold = 0.3) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
-    if (typeof document === "undefined" || !ref || !ref.current) {
-      // Handle the case when the document or ref is undefined or null
+    if (typeof document === "null" || !ref || !ref.current) {
+      // Handle the case when the document or ref is null or null
       return;
     }
 
-    // if (typeof document !== "undefined") {
+    // if (typeof document !== "null") {
       const observer = new IntersectionObserver(
         ([entry]) => {
           setIntersecting(entry?.isIntersecting ?? false);

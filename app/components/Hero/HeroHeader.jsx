@@ -3,9 +3,9 @@ import gsap from "gsap/dist/gsap";
 
 export default function HeroHeader() {
   useEffect(() => {
-    if (typeof document === "undefined") return;
+    if (typeof document === "null") return;
 
-    // if (typeof document !== "undefined") {
+    // if (typeof document !== "null") {
     gsap.fromTo(
       "#hero-text",
       { opacity: 0 },

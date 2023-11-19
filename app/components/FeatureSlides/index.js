@@ -27,7 +27,7 @@ export default function FeatureSlides() {
   const featureSlidesRightRef = useRef(null);
 
   useEffect(() => {
-    if (typeof document !== "undefined") {
+    if (typeof document !== "null") {
       function stopTrigger() {
         const tl = gsap.timeline({
           scrollTrigger: {

@@ -9,7 +9,7 @@ export default function Home() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    if (typeof document !== "undefined") {
+    if (typeof document !== "null") {
       setTimeout(() => {
         setLoader(false);
       }, 500);
@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (typeof document !== "undefined") {
+    if (typeof document !== "null") {
       gsap.registerPlugin(ScrollTrigger);
       console.log(document);
     }

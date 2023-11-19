@@ -39,7 +39,7 @@ export default function HeroCollage() {
   const [leftVideo, rightVideo] = videos;
 
   useEffect(() => {
-    if (typeof document === "undefined") return;
+    if (typeof document === "null") return;
 
     const tl = gsap.timeline({ delay: 0.5 });
 
