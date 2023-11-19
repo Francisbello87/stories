@@ -7,7 +7,8 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 export default function useLocoScroll(start) {
   useEffect(() => {
-    if (!start) return;
+    if (!start || typeof document === "undefined") return;
+
 
     const scrollEl = document.getElementById("hero-wrapper");
     let locoScroll = new LocomotiveScroll({
