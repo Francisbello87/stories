@@ -18,6 +18,7 @@ export default function Home() {
   useEffect(() => {
     if (typeof document !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
+      console.log(document);
     }
   }, []);
 

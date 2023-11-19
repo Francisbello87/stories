@@ -6,10 +6,10 @@ function useOnScreen(ref, threshold = 0.3) {
 
   useEffect(() => {
 
-     if (!ref || !ref.current) {
-       // Handle the case when the ref is undefined or null
-       return;
-     }
+   if (typeof document === "undefined" || !ref || !ref.current) {
+     // Handle the case when the document or ref is undefined or null
+     return;
+   }
     const observer = new IntersectionObserver(
       ([entry]) => {
   

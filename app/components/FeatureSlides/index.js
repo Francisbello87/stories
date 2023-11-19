@@ -1,3 +1,4 @@
+"use client"
 import { featuresSlides } from "@/app/data";
 import cn from "classnames";
 import Image from "next/image";
