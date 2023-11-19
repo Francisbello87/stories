@@ -9,6 +9,7 @@ export default function HeroPhone() {
   const phoneRef = useRef(null);
 
   useEffect(() => {
+    if (typeof document === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
     function intro() {
       const tl = gsap.timeline();
