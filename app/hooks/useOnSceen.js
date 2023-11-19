@@ -9,7 +9,7 @@ function useOnScreen(ref, threshold = 0.3) {
       return;
     }
 
-    if (typeof document !== "undefined") {
+    // if (typeof document !== "undefined") {
       const observer = new IntersectionObserver(
         ([entry]) => {
           setIntersecting(entry?.isIntersecting ?? false);
@@ -28,7 +28,7 @@ function useOnScreen(ref, threshold = 0.3) {
           observer.unobserve(currentRef);
         }
       };
-    }
+    // }
   }, [ref, threshold]);
 
   return isIntersecting;

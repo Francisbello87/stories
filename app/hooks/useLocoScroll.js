@@ -9,7 +9,7 @@ export default function useLocoScroll(start) {
   useEffect(() => {
     if (!start || typeof document === "undefined") return;
 
-    if (typeof document !== "undefined") {
+    // if (typeof document !== "undefined") {
       const scrollEl = document.getElementById("hero-wrapper");
       let locoScroll = new LocomotiveScroll({
         el: scrollEl,
@@ -67,6 +67,6 @@ export default function useLocoScroll(start) {
           console.log("Kill", locoScroll);
         }
       };
-    }
+    // }
   }, [start]);
 }

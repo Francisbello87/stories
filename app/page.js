@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import gsap from "gsap/dist/gsap";
@@ -10,9 +9,11 @@ export default function Home() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 500);
+    if (typeof document !== "undefined") {
+      setTimeout(() => {
+        setLoader(false);
+      }, 500);
+    }
   }, []);
 
   useEffect(() => {
