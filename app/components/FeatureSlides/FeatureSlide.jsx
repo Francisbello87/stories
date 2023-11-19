@@ -8,11 +8,14 @@ export default function FeatureSlide(props ) {
   const onScreen = useOnScreen(ref);
 
   useEffect(() => {
-    if (onScreen) {
-      updateActiveImage(index);
+    if (typeof document !== "undefined") {
+     if (onScreen) {
+       updateActiveImage(index);
 
-      console.log(index)
+       console.log(index);
+     }
     }
+    
   }, [onScreen, index]);
   return (
     <div ref={ref} className="feature-slide">

@@ -3,12 +3,15 @@ import gsap from "gsap/dist/gsap";
 
 export default function HeroHeader() {
   useEffect(() => {
-     if (typeof document === "undefined") return;
-    gsap.fromTo(
-      "#hero-text",
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5, delay: 0.2 }
-    );
+    if (typeof document === "undefined") return;
+
+    if (typeof document !== "undefined") {
+      gsap.fromTo(
+        "#hero-text",
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, delay: 0.2 }
+      );
+    }
   }, []);
   return (
     <div className="hero-text-section">

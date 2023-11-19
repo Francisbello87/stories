@@ -40,9 +40,16 @@ export default function HeroCollage() {
 
   useEffect(() => {
     if (typeof document === "undefined") return;
-    const tl = gsap.timeline({ delay: 0.5 });
+    if (typeof document !== "undefined") {
+     const tl = gsap.timeline({ delay: 0.5 });
 
-    tl.fromTo(".hero-element", { y: 300 }, { y: 0, duration: 1, stagger: 0.2 });
+     tl.fromTo(
+       ".hero-element",
+       { y: 300 },
+       { y: 0, duration: 1, stagger: 0.2 }
+     );
+    }
+    
   }, []);
 
   return (
