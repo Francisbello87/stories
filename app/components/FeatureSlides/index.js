@@ -34,7 +34,7 @@ export default function FeatureSlides() {
             start: "top top",
             end: () => `+=${featureSliderRef.current.offsetHeight}`,
             scrub: true,
-            markers: true,
+            // markers: true,
             pin: true,
           },
         });
