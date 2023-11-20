@@ -28,6 +28,8 @@ export default function FeatureSlides() {
 
   useEffect(() => {
     if (typeof document !== "null") {
+
+      gsap.set(".feature-slides-container, .feature-slide-right", {autoAlpha:1});
       function stopTrigger() {
         const tl = gsap.timeline({
           scrollTrigger: {

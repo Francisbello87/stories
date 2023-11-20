@@ -50,6 +50,7 @@ html.lenis {
 }
 
 .feature-slides-container {
+  visibility: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -76,6 +77,7 @@ html.lenis {
   }
 
   .feature-slide-right {
+    visibility: hidden;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -99,7 +101,7 @@ html.lenis {
   }
 }
 
-.footer{
+.footer {
   margin-top: 100px;
   height: 100vh;
   background: #285ede;
@@ -109,5 +111,4 @@ html.lenis {
   color: white;
   font-size: 3rem;
   font-weight: 600;
-
 }
